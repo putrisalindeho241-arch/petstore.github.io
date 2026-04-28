@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PetStore</title>
+  <title>Pet Haven</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,24 +11,25 @@
 <!-- NAVBAR -->
 <header>
   <nav class="navbar">
-    <h1 class="logo">PetStore 🐾</h1>
-
+    <h1 class="logo">PetHaven 🐾</h1>
     <ul class="nav-links">
       <li><a href="#">Home</a></li>
-      <li><a href="#products">Products</a></li>
+      <li><a href="#products">Pets</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#contact">Contact</a></li>
       <li><a href="#cart">Cart (<span id="cart-count">0</span>)</a></li>
     </ul>
-
     <button class="menu-toggle">☰</button>
   </nav>
 </header>
 
 <!-- HERO -->
 <section class="hero">
-  <h2>Your Trusted Pet Store</h2>
-  <p>Healthy, happy pets for your family ❤️</p>
+  <div class="hero-content">
+    <h2>Bring Home Happiness 🐶</h2>
+    <p>Find your perfect companion from our loving selection of pets.</p>
+    <a href="#products" class="btn">Shop Now</a>
+  </div>
 </section>
 
 <!-- PRODUCTS -->
@@ -38,30 +39,30 @@
 
     <div class="card">
       <img src="https://placekitten.com/300/200">
-      <h3>Cat</h3>
+      <h3>Persian Cat</h3>
       <p>$150</p>
-      <button onclick="addToCart('Cat',150)">Add to Cart</button>
+      <button onclick="addToCart('Persian Cat',150)">Add to Cart</button>
     </div>
 
     <div class="card">
       <img src="https://placedog.net/300/200">
-      <h3>Dog</h3>
+      <h3>Golden Retriever</h3>
       <p>$250</p>
-      <button onclick="addToCart('Dog',250)">Add to Cart</button>
+      <button onclick="addToCart('Golden Retriever',250)">Add to Cart</button>
     </div>
 
     <div class="card">
       <img src="https://loremflickr.com/300/200/bird">
-      <h3>Bird</h3>
+      <h3>Parrot</h3>
       <p>$80</p>
-      <button onclick="addToCart('Bird',80)">Add to Cart</button>
+      <button onclick="addToCart('Parrot',80)">Add to Cart</button>
     </div>
 
     <div class="card">
       <img src="https://loremflickr.com/300/200/fish">
-      <h3>Fish</h3>
+      <h3>Goldfish</h3>
       <p>$20</p>
-      <button onclick="addToCart('Fish',20)">Add to Cart</button>
+      <button onclick="addToCart('Goldfish',20)">Add to Cart</button>
     </div>
 
     <div class="card">
@@ -83,27 +84,43 @@
 
 <!-- ABOUT -->
 <section id="about" class="about">
-  <h2>About Us</h2>
+  <h2>About PetHaven</h2>
   <p>
-    We are a trusted pet store providing healthy and well-cared animals.
-    Our mission is to connect loving families with their perfect pets.
+    PetHaven is dedicated to connecting loving families with healthy, happy pets.
+    We ensure all animals are ethically sourced and well cared for.
   </p>
 </section>
 
 <!-- CONTACT -->
 <section id="contact" class="contact">
   <h2>Contact Us</h2>
-  <form>
-    <input type="text" placeholder="Your Name" required>
-    <input type="email" placeholder="Your Email" required>
-    <textarea placeholder="Message"></textarea>
-    <button type="submit">Send</button>
-  </form>
+
+  <div class="contact-container">
+    <div class="contact-info">
+      <h3>Get in Touch</h3>
+      <p>📧 Email: support@pethaven.com</p>
+      <p>📞 Phone: +62 812-3456-7890</p>
+      <p>📍 Location: Jakarta, Indonesia</p>
+
+      <h4>Follow Us</h4>
+      <p>Instagram: @pethaven.id</p>
+      <p>Facebook: PetHaven Official</p>
+      <p>TikTok: @pethavenpets</p>
+    </div>
+
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <p>© 2026 PetStore | Privacy Policy | Terms</p>
+  <p>© 2026 PetHaven | Privacy Policy | Terms</p>
 </footer>
 
 <script src="script.js"></script>
