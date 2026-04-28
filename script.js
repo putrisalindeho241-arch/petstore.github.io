@@ -1,12 +1,36 @@
-// Mobile menu toggle
-const toggleBtn = document.querySelector(".menu-toggle");
-const navLinks = document.querySelector(".nav-links");
+const toggle = document.querySelector(".menu-toggle");
+const nav = document.querySelector(".nav-links");
 
-toggleBtn.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
+toggle.addEventListener("click", () => {
+  nav.classList.toggle("active");
 });
 
-// Simple cart alert
-function addToCart(product) {
-  alert(product + " added to cart!");
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+function updateCart() {
+  const cartList = document.getElementById("cart-items");
+  const totalEl = document.getElementById("total");
+  const countEl = document.getElementById("cart-count");
+
+  cartList.innerHTML = "";
+  let total = 0;
+
+  cart.forEach(item => {
+    const li = document.createElement("li");
+    li.textContent = item.name + " - $" + item.price;
+    cartList.appendChild(li);
+    total += item.price;
+  });
+
+  totalEl.textContent = total;
+  countEl.textContent = cart.length;
+
+  localStorage.setItem("cart", JSON.stringify(cart));
 }
+
+function addToCart(name, price) {
+  cart.push({name, price});
+  updateCart();
+}
+
+updateCart();
