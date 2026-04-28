@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">PetStore 🐾</h1>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#products">Products</a></li>
+      </ul>
+      <button class="menu-toggle">☰</button>
+    </nav>
+  </header>
+
+  <!-- HERO / HOME -->
+  <section class="hero">
+    <h2>Find Your Perfect Pet</h2>
+    <p>We sell a variety of adorable pets for your home.</p>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section id="products" class="products">
+    <h2>Our Pets</h2>
+    <div class="product-grid">
+
+      <!-- PRODUCT CARD -->
+      <div class="card">
+        <img src="https://placekitten.com/300/200" alt="Cat">
+        <h3>Cat</h3>
+        <p>$150</p>
+        <button onclick="addToCart('Cat')">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <img src="https://placedog.net/300/200" alt="Dog">
+        <h3>Dog</h3>
+        <p>$250</p>
+        <button onclick="addToCart('Dog')">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <img src="https://loremflickr.com/300/200/bird" alt="Bird">
+        <h3>Bird</h3>
+        <p>$80</p>
+        <button onclick="addToCart('Bird')">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <img src="https://loremflickr.com/300/200/fish" alt="Fish">
+        <h3>Fish</h3>
+        <p>$20</p>
+        <button onclick="addToCart('Fish')">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <img src="https://loremflickr.com/300/200/rabbit" alt="Rabbit">
+        <h3>Rabbit</h3>
+        <p>$60</p>
+        <button onclick="addToCart('Rabbit')">Add to Cart</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 PetStore. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
